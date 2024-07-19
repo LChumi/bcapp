@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class ImagenService {
 
-  private imagenesLoging = [
+  
+  private imagenesLoging: any[] = [
     { nombre: "palmera.PNG" },
     { nombre: "mundo.PNG" },
     { nombre: "microfono.PNG" },

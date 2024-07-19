@@ -1,48 +1,56 @@
 <div class="flex flex-col items-center w-screen h-screen box-border">
     <img src="images/img/bancoLoja.PNG" alt="Banco Loja" class="w-full" />
     <div class="flex flex-col w-3/4 box-content">
-      <h2 class="text-3xl text-green-500 font-bold border-b-4 mt-10 w-full">
-        ACCESO BANCA ELECTRONICA
-      </h2>
-      <h4 class="text-2xl mt-6">
-        Bienvenido <span class="font-bold uppercase">{{ nombre }}:</span>
-      </h4>
-      <p class="text-xl my-3">
-        Por favor responda la siguiente pregunta y seleccione una imagen.
-      </p>
-      <div class="grid grid-cols-3 w-full min-h-min gap-3 px-10 my-5">
-        <div class="min-h-min">
-          <p class="text-green-500 text-xl">Pregunta de seguridad:</p>
-          <p class="text-green-700 bg-green-200 p-5">
-            {{ question?.pregunta }}
-          </p>
+        <h2 class="text-3xl text-green-500 font-bold border-b-4 mt-10 w-full">
+            ACCESO BANCA ELECTRONICA
+        </h2>
+        <h4 class="text-2xl mt-6">
+            Bienvenido <span class="font-bold uppercase">{{ nombre }}:</span>
+        </h4>
+        <p class="text-xl my-3">
+            Por favor responda la siguiente pregunta y seleccione una imagen.
+        </p>
+        <div class="grid grid-cols-3 w-full min-h-min gap-3 px-10 my-5">
+            <div class="min-h-min">
+                <p class="text-green-500 text-xl">Pregunta de seguridad:</p>
+                <p class="text-green-700 bg-green-200 p-5">
+                    {{ question?.pregunta }}
+                </p>
+            </div>
+            <div class="min-h-min">
+                <p class="text-green-500 text-xl">Respuesta:</p>
+                <input title="Preguntas" type="text" class="border-2 border-gray-400 w-full"
+                    [(ngModel)]="responsQuestion" (keypress)="NoPermitirCaracteres($event)" />
+            </div>
+            <a class="min-h-min" (click)="getRandomQuestion()">
+                <img src="images/img/pruebasPregun.png" alt="Cambiar pregunta" class="h-12" />
+            </a>
         </div>
-        <div class="min-h-min">
-          <p class="text-green-500 text-xl">Respuesta:</p>
-          <input title="Preguntas" type="text" class="border-2 border-gray-400 w-full" [(ngModel)]="responsQuestion" (keypress)="NoPermitirCaracteres($event)" />
-        </div>
-        <a class="min-h-min" (click)="getRandomQuestion()">
-          <img src="images/img/pruebasPregun.png" alt="Cambiar pregunta" class="h-12" />
-        </a>
-      </div>
-      <p class="m-3">
-        Por favor seleccione la imagen que asocie al proceso de registro/actualización de información y presione el botón
-        <span>ACEPTAR</span> para continuar.
-      </p>
-      <div class="grid grid-cols-5 w-full">
-        @for (imgd of imagenesAleatorias; track $index) {
+        <p class="m-3">
+            Por favor seleccione la imagen que asocie al proceso de registro/actualización de información y presione el
+            botón
+            <span>ACEPTAR</span> para continuar.
+        </p>
+        <button type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700"
+            (click)="barajarImagenes()"
+            >Cambiar
+            Imagen </button>
+        <div class="grid grid-cols-5 w-full">
+            @for (imgd of imagenesAleatorias; track $index) {
             <div class="flex justify-center items-center">
                 <img src="images/icons/{{ imgd.nombre }}" alt="{{ imgd.nombre }}" (click)="almacenarImg(imgd.nombre)" />
             </div>
-        }
-      </div>
-      <div class="flex min-w-min justify-end mt-2">
-        @if (validationMensa) {
-          <span class="bg-red-600 font-bold text-xs p-1 uppercase rounded-sm border-2 border-black mx-3">{{ validationMensa }}</span>  
-        }
-        <a class="w-80 min-h-min" (click)="validar()">
-          <img src="images/img/ingresar.jpg" alt="Ingresar" />
-        </a>
-      </div>
+            }
+        </div>
+        <div class="flex min-w-min justify-end mt-2">
+            @if (validationResponse) {
+            <span class="bg-red-600 font-bold text-xs p-1 uppercase rounded-sm border-2 border-black mx-3">{{
+                validationMensa }}</span>
+            }
+            <a class="w-80 min-h-min" (click)="validar()">
+                <img src="images/img/ingresar.jpg" alt="Ingresar" />
+            </a>
+        </div>
     </div>
-  </div>
+</div>
