@@ -1,0 +1,56 @@
+[
+  {
+    "username": "admin",
+    "password": "Admin123",
+    "preguntas": [
+      {
+        "pregunta": "¿Cuál es tu color favorito?",
+        "respuesta": "Azul"
+      },
+      {
+        "pregunta": "¿Cuál es tu animal favorito?",
+        "respuesta": "Perro"
+      },
+      {
+        "pregunta": "¿Cuál es tu comida favorita?",
+        "respuesta": "Pizza"
+      },
+      {
+        "pregunta": "¿Cuál es tu deporte favorito?",
+        "respuesta": "Fútbol"
+      },
+      {
+        "pregunta": "¿Cuál es tu película favorita?",
+        "respuesta": "Inception"
+      }
+    ],
+    "logo": "palmera.PNG"
+  },
+  {
+    "username": "user",
+    "password": "user123",
+    "preguntas": [
+      {
+        "pregunta": "¿Cuál es tu color favorito?",
+        "respuesta": "Rojo"
+      },
+      {
+        "pregunta": "¿Cuál es tu animal favorito?",
+        "respuesta": "Gato"
+      },
+      {
+        "pregunta": "¿Cuál es tu comida favorita?",
+        "respuesta": "Hamburguesa"
+      },
+      {
+        "pregunta": "¿Cuál es tu deporte favorito?",
+        "respuesta": "Basketball"
+      },
+      {
+        "pregunta": "¿Cuál es tu película favorita?",
+        "respuesta": "The Matrix"
+      }
+    ],
+    "logo": "satelite.PNG"
+  }
+]

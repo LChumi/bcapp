@@ -28,10 +28,33 @@
     </div>
 </div>
 </header>
-<main id="page-content" class="flex max-w-full flex-auto flex-col">
-    <div>
-        <img src="images/img/ad0a5446_predio_new_jpg.jpg" alt="background" class="w-screen">
-    </div>
+<main id="page-content" class="flex max-w-full flex-auto flex-col relative">
+  <div class="relative">
+      <img src="images/img/ad0a5446_predio_new_jpg.jpg" alt="background" class="w-screen">
+      <div class="absolute top-1/2 right-8 transform -translate-y-1/2 flex flex-col">
+              <button type="submit" (click)="goToLogin()">
+                  <img
+                    src="images/img/option_home_1.png"
+                    alt="Option 1"
+                    class="m-1 shadow-lg border-2 border-green-800"
+                  />
+              </button>
+              <button type="submit">
+                  <img
+                    src="images/img/option_home_2.png"
+                    alt="Option 2"
+                    class="m-1 shadow-lg border-2 border-green-800"
+                  />
+              </button>
+              <button type="submit">
+                  <img
+                    src="images/img/option_home_3.png"
+                    alt="Option 3"
+                    class="m-1 shadow-lg border-2 border-green-800"
+                  />
+              </button>
+      </div>
+  </div>
     <div 
     class="grid grid-cols-4 items-center px-6 py-6">
     <button type="button">
@@ -43,9 +66,10 @@
     <button type="button">
         <img src="images/img/microfinanzas.PNG" alt="Microfinazas">
     </button>
-    <button type="button    ">
+    <button type="button">
         <img src="images/img/tarjetaCredito.PNG" alt="Tarjeta de credito">
     </button>
     </div>
+    <router-outlet/>
 </main>
 </div>
