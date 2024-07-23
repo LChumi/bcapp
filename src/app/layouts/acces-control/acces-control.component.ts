@@ -82,7 +82,7 @@ export default class AccesControlComponent implements OnInit{
       return;
     }
 
-    this.router.navigate(['/panel']);
+    this.router.navigate(['banco/dashboard']);
   }
 
   controlMensaje(mensaje: string) {
